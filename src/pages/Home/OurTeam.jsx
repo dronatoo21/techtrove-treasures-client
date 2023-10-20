@@ -1,26 +1,26 @@
 const OurTeam = () => {
     return (
         <div>
-            <div className="text-center grid grid-cols-1 md:grid-cols-2 lg:gap-0 md:gap-5 gap-10 lg:grid-cols-4 mb-28 py-5">
+            <div className="text-center mb-28 py-5 grid grid-cols-1 md:grid-cols-2 lg:gap-0 md:gap-5 gap-10 lg:grid-cols-4">
             <div >
-                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/hXqLVd6/prf.jpg" alt="img" />
-                <h2 className="text-2xl mt-3 font-bold">Henry Nicholas</h2>
-                <p className="font-semibold text-xl"><i>@Henry</i></p>
+                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/4FjHVGf/m1.jpg" alt="img" />
+                <h2 className="text-2xl mt-3 font-bold">Adrian</h2>
+                <p className="font-semibold text-xl"><i>@adrian</i></p>
             </div>
             <div>
-                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/5xVh4kK/agn2.jpg" alt="img" />
-                <h2  className="text-2xl mt-3 font-bold">Maria Gomez</h2>
-                <p className="font-semibold text-xl"><i>@Gomex</i></p>
+                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/QYq2S2s/m2.jpg" alt="img" />
+                <h2  className="text-2xl mt-3 font-bold">David</h2>
+                <p className="font-semibold text-xl"><i>@david</i></p>
             </div>
             <div>
-                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/DYKhzyV/agn1.jpg" alt="img" />
-                <h2  className="text-2xl mt-3 font-bold">Arman Alam</h2>
-                <p className="font-semibold text-xl"><i>@Arman</i></p>
+                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/Drv2ZBz/m3.jpg" alt="img" />
+                <h2  className="text-2xl mt-3 font-bold">harry</h2>
+                <p className="font-semibold text-xl"><i>@harry</i></p>
             </div>
             <div>
-                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/x19DnW4/prf4.jpg" alt="img" />
-                <h2  className="text-2xl mt-3 font-bold">Nayan Khan</h2>
-                <p className="font-semibold text-xl"><i>@Nayan</i></p>
+                <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/rwQWKhC/m4.jpg" alt="img" />
+                <h2  className="text-2xl mt-3 font-bold">zayn</h2>
+                <p className="font-semibold text-xl"><i>@zayn</i></p>
             </div>
         </div>
         </div>
