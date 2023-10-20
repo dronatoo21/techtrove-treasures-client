@@ -17,16 +17,16 @@
     {
       "id": 4,
       "brand_name": "xiaomi",
-      "brand_image": "https://i.ibb.co/xMNyqPg/mi.png"
+      "brand_image": "https://i.ibb.co/Wgw9nYy/xiaomi.png"
     },
     {
       "id": 5,
       "brand_name": "Asus",
-      "brand_image": "https://i.ibb.co/2WT7YVZ/asus.jpg"
+      "brand_image": "https://i.ibb.co/wLrLgxY/Asus-Logo.png"
     },
     {
       "id": 6,
       "brand_name": "Intel",
-      "brand_image": "https://i.ibb.co/fHGXJ6f/intel.png"
+      "brand_image": "https://i.ibb.co/k3D55Xb/intel-logo.png"
     }
 ]
