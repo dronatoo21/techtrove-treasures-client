@@ -4,8 +4,8 @@ const Nav = () => {
 
     const links = <>
     <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/">Home</NavLink></li>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="#">Contact</NavLink></li>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="#">About us</NavLink></li>
+    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/addtocart">Add Product</NavLink></li>
+    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="#">My Cart</NavLink></li>
     </>
 
     return (
