@@ -1,6 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Brands from "./Brands";
 import Banner from "./Banner";
+import Discount from "./Discount";
+import OurTeam from "./OurTeam";
 
 const Home = () => {
 
@@ -15,6 +17,9 @@ const Home = () => {
                     brands.map(brand => <Brands key={brand.id} brand={brand}/>)
                 }
             </div>
+            <Discount/>
+            <h1 className="font-bold text-3xl text-center mt-14">Our Members</h1>
+            <OurTeam/>
         </div>
     );
 };
