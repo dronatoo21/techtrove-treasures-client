@@ -4,6 +4,8 @@ import Home from "../pages/Home/Home";
 import AddCart from "../pages/AddCart/AddCart";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
+import MyCart from "../pages/MyCart/MyCart";
+import PrivateRoute from "./PrivateRoute";
 
 const router = createBrowserRouter([
     {
@@ -17,7 +19,11 @@ const router = createBrowserRouter([
             },
             {
                 path: '/addtocart',
-                element: <AddCart/>
+                element: <PrivateRoute><AddCart/></PrivateRoute>
+            },
+            {
+                path: '/mycart',
+                element: <PrivateRoute><MyCart/></PrivateRoute>
             },
             {
                 path: '/register',
