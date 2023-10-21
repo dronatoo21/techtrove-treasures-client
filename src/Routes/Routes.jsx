@@ -6,11 +6,14 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import MyCart from "../pages/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
+import BrandProducts from "../pages/BrandProducts/BrandProducts";
+import ErrorPage from "../pages/ErrorPage/ErrorPage";
 
 const router = createBrowserRouter([
     {
         path: '/',
         element: <Root/>,
+        errorElement: <ErrorPage/>,
         children: [
             {
                 path: '/',
@@ -32,6 +35,11 @@ const router = createBrowserRouter([
             {
                 path: '/login',
                 element: <Login/>
+            },
+            {
+                path: '/brandproducts',
+                element: <BrandProducts/>,
+                loader: () => fetch('http://localhost:3000/product')    
             }
         ]
     }
