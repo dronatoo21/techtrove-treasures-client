@@ -10,20 +10,25 @@ export const AuthContext = createContext(null);
 const AuthProvider = ({children}) => {
 
     const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
 
     const createUser = (eamil, password) => {
+        setLoading(true);
         return createUserWithEmailAndPassword(auth, eamil, password)
     }
 
     const loginUser = (eamil, password) => {
+        setLoading(true);
         return signInWithEmailAndPassword(auth , eamil, password)
     }
 
     const googleLogin = (provider) => {
+        setLoading(true);
         return signInWithPopup(auth, provider); 
     }
     
     const userLogout = () => {
+        setLoading(true);
         return signOut(auth);
     }
 
@@ -31,6 +36,7 @@ const AuthProvider = ({children}) => {
         const unsbsCribe = onAuthStateChanged(auth, currentUser => {
             console.log('user in', currentUser);
             setUser(currentUser);
+            setLoading(false);
         })
         return () => {
             unsbsCribe();
@@ -38,7 +44,7 @@ const AuthProvider = ({children}) => {
     },[]);
 
 
-    const authInfo = {user, createUser, loginUser, googleLogin, userLogout}
+    const authInfo = {user, createUser, loginUser, googleLogin, userLogout, loading}
 
     return (
         <AuthContext.Provider value={authInfo}>
