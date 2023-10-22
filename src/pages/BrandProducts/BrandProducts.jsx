@@ -1,19 +1,15 @@
-import { useLoaderData } from "react-router-dom";
-import ProductCard from "../Products/productCard";
+// import { useParams } from "react-router-dom";
 
-const BrandProducts = () => {
+// const BrandProducts = () => {
 
-    const products = useLoaderData();
+//     const { brand } = useParams();
+//     console.log(brand);
 
-    return (
-        <div>
-            <div className="grid grid-cols-1 md:my-9 md:grid-cols-2 gap-5 p-5 lg:grid-cols-4">
-            { 
-                products.map(product => <ProductCard key={product.id} product={product}></ProductCard>)
-            }
-            </div>
-        </div>
-    );
-};
+//     return (
+//         <div>
+            
+//         </div>
+//     );
+// };
 
-export default BrandProducts;
+// export default BrandProducts;
