@@ -9,7 +9,7 @@ const Register = () => {
     const { createUser } = useContext(AuthContext)
     const [registerError, setRegisterError] = useState('');
     const [showPass, setShowPass] = useState();
-    const [success, setSuccess] = useState('');
+    const [successMsg, setSuccessMsg] = useState('');
     const location = useLocation();
     const navigate = useNavigate();
     const handleRegister = e => {
@@ -20,7 +20,7 @@ const Register = () => {
         const checked = e.target.checkbox.checked;
         console.log(name, email, password);
         setRegisterError('');
-        setSuccess('');
+        setSuccessMsg('');
         if(!/^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/.test(email)){
           setRegisterError('Please write a valid email!');
           return;
@@ -39,7 +39,7 @@ const Register = () => {
         createUser(email, password)
         .then(res => {
             console.log(res.user);
-            setSuccess('Successfully Registered')
+            setSuccessMsg('Successfully Registered')
             toast("successfully Registered");
             navigate(location?.state ? location.state : '/')
             updateProfile(res.user, {
@@ -104,7 +104,7 @@ const Register = () => {
                     registerError && <p className="text-red-700 px-8 pb-5">{registerError}</p>
                   }
                   {
-                    success && <p className="text-green-500 px-8 pb-5">{success}</p>
+                    successMsg && <p className="text-green-500 px-8 pb-5">{successMsg}</p>
                   }
                   <p className="px-8 pb-5">Already have an account? Please <Link className="text-purple-700 font-bold" to="/login">Login</Link></p>
                 </div>

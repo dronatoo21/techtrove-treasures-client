@@ -1,16 +1,31 @@
+import { Link } from "react-router-dom";
+
 const ProductCard = ({product}) => {
 
-    const {imageUrl} = product;
+    const {_id, imageUrl, name, price, type, brandName, shortDes,} = product;
 
     return (
         <div>
-            <div className="card bg-base-100 shadow-xl">
-              <figure><img src={imageUrl} alt="products" /></figure>
+            <div className="card bg-base-100 shadow-xl h-[650px]">
+              <figure><img className="w-52 h-48" src={imageUrl} alt="products" /></figure>
               <div className="card-body">
-                <h2 className="card-title">Shoes!</h2>
-                <p>If a dog chews shoes whose shoes does he choose?</p>
-                <div className="card-actions justify-end">
-                  <button className="btn btn-primary">Buy Now</button>
+                {/* <p className="rounded btn font-semibold border-2 border-gray-300 h-4 w-3/12">{brandName}</p> */}
+                <p className="badge border-2 border-gray-300 px-4 mx-auto font-bold">{brandName} - {type}</p>
+                <h2 className="card-title">{name}</h2>
+                {
+                        shortDes.length > 150 ? <p className="font-normal">{shortDes.slice(0, 150)} <Link to={`#`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
+                }
+                <p className="font-semibold">Price: {price} BDT</p>
+                <div className="rating">
+                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
+                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
+                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
+                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
+                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
+                </div>
+                <div className="card-actions my-3 justify-center">
+                  <button className="btn btn-neutral">Details</button>
+                  <button className="btn btn-neutral">Update</button>
                 </div>
               </div>
             </div>

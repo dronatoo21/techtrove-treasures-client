@@ -37,8 +37,8 @@ const Nav = () => {
           { user ?
             <>
           <label tabIndex={0} className="btn mr-5 btn-ghost btn-circle avatar">
-            <img className="rounded-full" src={user.photoURL} alt="" />
-            <p className="w-16">{user.displayName}</p>
+            <img className="rounded-full" src={user?.photoURL} alt="" />
+            <p className="w-16">{user?.displayName}</p>
           </label>
             <button onClick={handleLogout} className="btn bg-gray-800 text-white rounded-xl">Logout</button></>
               : <Link to="/login"><button className="btn bg-gray-800 text-white rounded-xl">Login</button></Link>
