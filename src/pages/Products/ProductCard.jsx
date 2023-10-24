@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const ProductCard = ({product}) => {
 
-    const {_id, imageUrl, name, price, type, brandName, shortDes,} = product;
+    const {_id, imageUrl, name, price, type, brandName, shortDes, ratings} = product;
 
     return (
         <div>
@@ -15,16 +15,9 @@ const ProductCard = ({product}) => {
                         shortDes.length > 150 ? <p className="font-normal">{shortDes.slice(0, 150)} <Link to={`#`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
                 }
                 <p className="font-semibold">Price: {price} BDT</p>
-                <div className="rating">
-                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
-                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
-                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
-                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
-                  <input type="radio" name={`rating-${_id}`} className="mask mask-star" />
-                </div>
+                <p className="text-lg font-medium">Ratings : {ratings}/5</p>
                 <div className="card-actions my-3 justify-center">
-                  <Link to={`/delails/${_id}`}><button className="btn btn-neutral">Details</button></Link>
-                  {/* <button className="btn btn-neutral">Details</button> */}
+                  <Link to={`/details/${_id}`}><button className="btn btn-neutral">Details</button></Link>
                   <Link to={`/updateProduct/${_id}`}><button className="btn btn-neutral">Update</button></Link>
                 </div>
               </div>
