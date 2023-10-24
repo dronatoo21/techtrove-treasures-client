@@ -12,7 +12,7 @@ const ProductCard = ({product}) => {
                 <p className="badge border-2 border-gray-300 px-4 mx-auto font-bold">{brandName} - {type}</p>
                 <h2 className="card-title">{name}</h2>
                 {
-                        shortDes.length > 150 ? <p className="font-normal">{shortDes.slice(0, 150)} <Link to={`#`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
+                        shortDes.length > 150 ? <p className="font-normal">{shortDes.slice(0, 150)} <Link to={`/details/${_id}`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
                 }
                 <p className="font-semibold">Price: {price} BDT</p>
                 <p className="text-lg font-medium">Ratings : {ratings}/5</p>
