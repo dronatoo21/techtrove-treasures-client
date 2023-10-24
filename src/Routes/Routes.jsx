@@ -1,7 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import Root from "../Layout/Root";
 import Home from "../pages/Home/Home";
-import AddCart from "../pages/AddCart/AddCart";
 import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import MyCart from "../pages/MyCart/MyCart";
@@ -10,6 +9,7 @@ import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Brand from "../pages/Brand/Brand";
 import Details from "../pages/Details/details";
 import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
+import AddProducts from "../pages/AddProducts/AddProduct";
 
 const router = createBrowserRouter([
     {
@@ -23,8 +23,8 @@ const router = createBrowserRouter([
                 loader: () => fetch('http://localhost:3000/brand')
             },
             {
-                path: '/addtocart',
-                element: <PrivateRoute><AddCart/></PrivateRoute>
+                path: '/addProduct',
+                element: <PrivateRoute><AddProducts/></PrivateRoute>
             },
             {
                 path: '/mycart',

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Swal from "sweetalert2";
-const AddCart = () => {
+const AddProducts = () => {
 
   const [ratingSelect, setRatingSelect] = useState();
 
@@ -66,4 +66,4 @@ const AddCart = () => {
     );
 };
 
-export default AddCart;
+export default AddProducts;

@@ -9,7 +9,7 @@ const Nav = () => {
 
     const links = <>
     <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/">Home</NavLink></li>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/addtocart">Add Product</NavLink></li>
+    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/addProduct">Add Product</NavLink></li>
     <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/mycart">My Cart</NavLink></li>
     </>
 
