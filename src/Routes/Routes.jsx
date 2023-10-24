@@ -6,9 +6,10 @@ import Register from "../pages/Register/Register";
 import Login from "../pages/Login/Login";
 import MyCart from "../pages/MyCart/MyCart";
 import PrivateRoute from "./PrivateRoute";
-// import BrandProducts from "../pages/BrandProducts/BrandProducts";
 import ErrorPage from "../pages/ErrorPage/ErrorPage";
 import Brand from "../pages/Brand/Brand";
+import Details from "../pages/Details/details";
+import UpdateProduct from "../pages/UpdateProduct/UpdateProduct";
 
 const router = createBrowserRouter([
     {
@@ -40,7 +41,17 @@ const router = createBrowserRouter([
             {
                 path: '/brand/:brandName',
                 element: <PrivateRoute><Brand/></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:3000/brand${params.brandName}`)    
+                loader: ({params}) => fetch(`http://localhost:3000/brand/${params.brandName}`)    
+            },
+            {
+                path: '/details/:id',
+                element: <PrivateRoute><Details/></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:3000/product/${params.id}`)
+            },
+            {
+                path: '/updateProduct/:id',	
+                element: <PrivateRoute><UpdateProduct/></PrivateRoute>,
+                loader: ({params}) => fetch(`http://localhost:3000/product/${params.id}`)
             }
         ]
     }
