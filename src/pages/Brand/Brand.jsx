@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import ProductCard from "../Products/productCard";
+import Slider from "./Slider";
 
 const Brand = () => {
 
@@ -24,6 +25,7 @@ const Brand = () => {
 
     return (
         <div className="p-5 lg:p-0">
+            <Slider/>
             <div className="grid my-14 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">
                 {
                    allProducts?.length < 1 ? <div className="relative my-16 md:my-60 md:w-[600px] lg:w-[900px] mx-auto"><h1 className="text-2xl md:text-5xl">Product not available in this brand</h1></div> : allProducts?.map(product => <ProductCard key={product._id} product={product}></ProductCard>)
