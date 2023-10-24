@@ -15,7 +15,6 @@ const AddProducts = () => {
     const shortDes = form.shortDes.value;
     const ratings = form.ratings.value;
     const newProduct = {imageUrl, name, brandName, type, price, shortDes, ratings}
-    console.log(newProduct);
 
     // send data to server
     fetch('http://localhost:3000/product', {

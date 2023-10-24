@@ -41,7 +41,6 @@ const UpdateProduct = () => {
       }
     })
     }
-
     return (
         <div>
             <>
