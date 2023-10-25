@@ -34,7 +34,7 @@ const AuthProvider = ({children}) => {
 
     useEffect(()=>{
         const unsbsCribe = onAuthStateChanged(auth, currentUser => {
-            console.log('user in', currentUser);
+            // console.log('user in', currentUser);
             setUser(currentUser);
             setLoading(false);
         })
