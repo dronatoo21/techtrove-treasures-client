@@ -9,7 +9,7 @@ const Brand = () => {
     const { brandName } = useParams();
 
     useEffect(() => {
-        fetch('https://techtrove-treasures-server-seven.vercel.app/product', {
+        fetch('https://techtrove-treasures-server-wine.vercel.app/product', {
 
         })
         .then(res => res.json())

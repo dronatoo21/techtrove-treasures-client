@@ -5,7 +5,7 @@ const Details = () => {
     const { imageUrl, name, price, type, brandName, shortDes, ratings} = useLoaderData();
     const handleAddToCart = ( imageUrl, name, price, type, brandName, shortDes, ratings) => {
         const product = { imageUrl, name, price, type, brandName, shortDes, ratings};
-        fetch('http://localhost:3000/cart', {
+        fetch('https://techtrove-treasures-server-wine.vercel.app/cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

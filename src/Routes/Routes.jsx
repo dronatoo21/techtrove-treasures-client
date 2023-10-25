@@ -20,7 +20,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>,
-                loader: () => fetch('https://techtrove-treasures-server-seven.vercel.app/brand')
+                loader: () => fetch('https://techtrove-treasures-server-wine.vercel.app/brand')
             },
             {
                 path: '/addProduct',
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/mycart',
                 element: <PrivateRoute><MyCart/></PrivateRoute>,
-                loader: () => fetch('https://techtrove-treasures-server-seven.vercel.app/cart')
+                loader: () => fetch('https://techtrove-treasures-server-wine.vercel.app/cart')
             },
             {
                 path: '/register',
@@ -42,17 +42,17 @@ const router = createBrowserRouter([
             {
                 path: '/brand/:brandName',
                 element: <PrivateRoute><Brand/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-seven.vercel.app/brand/${params.brandName}`)    
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-wine.vercel.app/brand/${params.brandName}`)    
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute><Details/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-seven.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-wine.vercel.app/product/${params.id}`)
             },
             {
                 path: '/updateProduct/:id',	
                 element: <PrivateRoute><UpdateProduct/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-seven.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-wine.vercel.app/product/${params.id}`)
             }
         ]
     }
