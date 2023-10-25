@@ -48,7 +48,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="navbar flex lg:flex-row flex-col md:h-auto h-60 md:py-9 lg:py-6">
+        <div className="navbar flex lg:flex-row flex-col md:h-64 lg:h-32 h-60 md:py-9 lg:py-6">
           <div className="navbar-start">
           <img className='md:w-20 w-10' src="https://i.ibb.co/M7sMZmk/logo.png" alt="logo" />
           <h1 className="md:text-4xl ml-1 text-2xl font-extrabold">TechTrove</h1>
