@@ -20,7 +20,7 @@ const router = createBrowserRouter([
             {
                 path: '/',
                 element: <Home/>,
-                loader: () => fetch('https://techtrove-treasures-server-383llv3kj-fahims-projects-4701004e.vercel.app/brand')
+                loader: () => fetch('https://techtrove-treasures-server-awyma6ws3-fahims-projects-4701004e.vercel.app/brand')
             },
             {
                 path: '/addProduct',
@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/mycart',
                 element: <PrivateRoute><MyCart/></PrivateRoute>,
-                loader: () => fetch('https://techtrove-treasures-server-383llv3kj-fahims-projects-4701004e.vercel.app/cart')
+                loader: () => fetch('https://techtrove-treasures-server-awyma6ws3-fahims-projects-4701004e.vercel.app/cart')
             },
             {
                 path: '/register',
@@ -42,17 +42,17 @@ const router = createBrowserRouter([
             {
                 path: '/brand/:brandName',
                 element: <PrivateRoute><Brand/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-383llv3kj-fahims-projects-4701004e.vercel.app/brand/${params.brandName}`)    
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-awyma6ws3-fahims-projects-4701004e.vercel.app/brand/${params.brandName}`)    
             },
             {
                 path: '/details/:id',
                 element: <PrivateRoute><Details/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-383llv3kj-fahims-projects-4701004e.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-awyma6ws3-fahims-projects-4701004e.vercel.app/product/${params.id}`)
             },
             {
                 path: '/updateProduct/:id',	
                 element: <PrivateRoute><UpdateProduct/></PrivateRoute>,
-                loader: ({params}) => fetch(`https://techtrove-treasures-server-383llv3kj-fahims-projects-4701004e.vercel.app/product/${params.id}`)
+                loader: ({params}) => fetch(`https://techtrove-treasures-server-awyma6ws3-fahims-projects-4701004e.vercel.app/product/${params.id}`)
             }
         ]
     }
