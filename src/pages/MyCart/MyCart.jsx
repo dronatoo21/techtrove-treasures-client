@@ -1,11 +1,15 @@
-import { useLoaderData } from "react-router-dom";
 import CartProduct from "./CartProduct";
-import { useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { AuthContext } from "../../providers/AuthProvider";
 
 const MyCart = () => {
-
-    const loadedProducts = useLoaderData();
-    const [products, setProducts] = useState(loadedProducts);
+    const {user} = useContext(AuthContext)
+    const [products, setProducts] = useState();
+    useEffect(()=>{
+        fetch(`http://https://techtrove-treasures-server-swart.vercel.app//usersCart?usersCart=${user?.email}`)
+        .then(res => res.json())
+        .then(data => setProducts(data))
+    },[])
 
     return (
         <>

@@ -1,11 +1,14 @@
 // import { useEffect } from "react";
+import { useContext } from "react";
 import { useLoaderData } from "react-router-dom";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProvider";
 const Details = () => {
+    const {user} = useContext(AuthContext) 
     const { imageUrl, name, price, type, brandName, shortDes, ratings} = useLoaderData();
     const handleAddToCart = ( imageUrl, name, price, type, brandName, shortDes, ratings) => {
-        const product = { imageUrl, name, price, type, brandName, shortDes, ratings};
-        fetch('https://techtrove-treasures-server-wine.vercel.app/cart', {
+        const product = { imageUrl, name, price, type, brandName, shortDes, ratings, usersCart: user.email};
+        fetch('https://techtrove-treasures-server-swart.vercel.app//cart', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'
