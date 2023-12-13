@@ -21,7 +21,7 @@ const UpdateProduct = () => {
         const updatedProduct = {imageUrl, name, brandName, type, price, ratings}
         console.log(updatedProduct);
 
-        fetch(`https://techtrove-treasures-server-swart.vercel.app//product/${_id}`, {
+        fetch(`https://techtrove-treasures-server-swart.vercel.app/product/${_id}`, {
       method: 'PUT',
       headers: {
         'content-type': 'application/json'

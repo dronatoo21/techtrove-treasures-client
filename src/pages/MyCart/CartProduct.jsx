@@ -13,7 +13,7 @@ const CartProduct = ({product, products, setProducts}) => {
             confirmButtonText: 'Yes, delete it!'
           }).then((result) => {
             if (result.isConfirmed) {
-            fetch(`https://techtrove-treasures-server-swart.vercel.app//cart/${_id}`, {
+            fetch(`https://techtrove-treasures-server-swart.vercel.app/cart/${_id}`, {
                 method: 'DELETE'
             })
             .then(res => res.json())

@@ -17,7 +17,7 @@ const AddProducts = () => {
     const newProduct = {imageUrl, name, brandName, type, price, shortDes, ratings}
 
     // send data to server
-    fetch('https://techtrove-treasures-server-swart.vercel.app//product', {
+    fetch('https://techtrove-treasures-server-swart.vercel.app/product', {
       method: 'POST',
       headers: {
         'content-type': 'application/json'
