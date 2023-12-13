@@ -14,7 +14,7 @@ const Root = () => {
             <ToastContainer/>
             <MessengerCustomerChat
                pageId="180357251829446"
-               appId="1003824134021262"
+               appId="1353697212176127"
              />,
         </div>
     );
