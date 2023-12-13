@@ -6,7 +6,7 @@ const MyCart = () => {
     const {user} = useContext(AuthContext)
     const [products, setProducts] = useState();
     useEffect(()=>{
-        fetch(`http://https://techtrove-treasures-server-swart.vercel.app/usersCart?=${user?.email}`)
+        fetch(`https://techtrove-treasures-server-swart.vercel.app/usersCart?usersCart=${user?.email}`)
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])

@@ -29,7 +29,7 @@ const router = createBrowserRouter([
             {
                 path: '/mycart',
                 element: <PrivateRoute><MyCart/></PrivateRoute>,
-                loader: () => fetch('http://https://techtrove-treasures-server-swart.vercel.app/usersCart?usersCart=mrdronatoo@gmail.com')
+                // loader: () => fetch('http://https://techtrove-treasures-server-swart.vercel.app/usersCart?usersCart=mrdronatoo@gmail.com')
             },
             {
                 path: '/register',
