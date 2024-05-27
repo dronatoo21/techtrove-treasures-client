@@ -28,7 +28,7 @@ const Details = () => {
         })
     }
     return (
-        <div className="my-20 p-5 dark:text-gray-900">
+        <div className="my-20 p-5 dark:text-gray-900 container mx-auto">
             <div className="card flex lg:flex-row flex-col card-side bg-base-100 shadow-xl">
               <div><img className="w-80 md:w-96 mx-auto" src={imageUrl} alt="product"/></div>
               <div className="card-body">

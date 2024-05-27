@@ -20,10 +20,10 @@ const Slider = () => {
     return (
       <>
       <div className="navigation-wrapper">
-        <div ref={sliderRef} className="keen-slider h-[400px]">
-          <div className="keen-slider__slide number-slide1"><img className="h-[400px] w-full" src={ban2} alt="" /></div>
-          <div className="keen-slider__slide number-slide2"><img className="h-[400px] w-full" src={ban1} alt="" /></div>
-          <div className="keen-slider__slide number-slide3"><img className="h-[400px] w-full" src={ban3} alt="" /></div>
+        <div ref={sliderRef} className="keen-slider h-[150px] md:h-[250px] lg:h-[400px]">
+          <div className="keen-slider__slide number-slide1"><img className="h-[150px] md:h-[250px] lg:h-[400px] w-full" src={ban2} alt="" /></div>
+          <div className="keen-slider__slide number-slide2"><img className="h-[150px] md:h-[250px] lg:h-[400px] w-full" src={ban1} alt="" /></div>
+          <div className="keen-slider__slide number-slide3"><img className="h-[150px] md:h-[250px] lg:h-[400px] w-full" src={ban3} alt="" /></div>
         </div>
         {loaded && instanceRef.current && (
           <>
