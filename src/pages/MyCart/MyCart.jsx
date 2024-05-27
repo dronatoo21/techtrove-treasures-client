@@ -13,7 +13,7 @@ const MyCart = () => {
 
     return (
         <>
-            <div className="min-h-[65vh]">
+            <div className="md:min-h-[65vh]">
                 <h1 className="font-bold text-3xl text-center mt-14">Products you added</h1>
                 {
                     products?.length != 0 ? <div className="grid my-14 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">

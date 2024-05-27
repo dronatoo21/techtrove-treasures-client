@@ -1,33 +1,92 @@
+import { useState } from "react"
+import { useKeenSlider } from "keen-slider/react"
+import "keen-slider/keen-slider.min.css"
+import "./styles.css"
+import ban1 from "../../assets/brandAd/1.png"
+import ban2 from "../../assets/brandAd/2.png"
+import ban3 from "../../assets/brandAd/3.png"
 const Slider = () => {
+  const [currentSlide, setCurrentSlide] = useState(0)
+  const [loaded, setLoaded] = useState(false)
+  const [sliderRef, instanceRef] = useKeenSlider({
+    initial: 0,
+    slideChanged(slider) {
+      setCurrentSlide(slider.track.details.rel)
+    },
+    created() {
+      setLoaded(true)
+    },
+  })
     return (
-        <div>
-            <div>
-            <div className="carousel w-full md:h-[500px]">
-              <div id="slide1" className="carousel-item relative w-full ">
-                <img src="https://i.ibb.co/4PBTbRv/gsmarena-009.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide4" className="btn bg-slate-800 text-white border-none btn-circle">❮</a> 
-                  <a href="#slide2" className="btn bg-slate-800 text-white border-none btn-circle">❯</a>
-                </div>
-              </div> 
-              <div id="slide2" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/SNTXmFp/309f13d3903bc75d0ed9abcb33b477b1.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide1" className="btn bg-slate-800 text-white border-none btn-circle">❮</a> 
-                  <a href="#slide3" className="btn bg-slate-800 text-white border-none btn-circle">❯</a>
-                </div>
-              </div> 
-              <div id="slide3" className="carousel-item relative w-full">
-                <img src="https://i.ibb.co/hXNdVJm/iphone-13-cover.jpg" className="w-full" />
-                <div className="absolute flex justify-between transform -translate-y-1/2 left-5 right-5 top-1/2">
-                  <a href="#slide2" className="btn bg-slate-800 text-white border-none btn-circle">❮</a> 
-                  <a href="#slide4" className="btn bg-slate-800 text-white border-none btn-circle">❯</a>
-                </div>
-              </div> 
-            </div>
-            </div>
+      <>
+      <div className="navigation-wrapper">
+        <div ref={sliderRef} className="keen-slider h-[400px]">
+          <div className="keen-slider__slide number-slide1"><img className="h-[400px] w-full" src={ban2} alt="" /></div>
+          <div className="keen-slider__slide number-slide2"><img className="h-[400px] w-full" src={ban1} alt="" /></div>
+          <div className="keen-slider__slide number-slide3"><img className="h-[400px] w-full" src={ban3} alt="" /></div>
         </div>
+        {loaded && instanceRef.current && (
+          <>
+            <Arrow
+              left
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.prev()
+              }
+              disabled={currentSlide === 0}
+            />
+
+            <Arrow
+              onClick={(e) =>
+                e.stopPropagation() || instanceRef.current?.next()
+              }
+              disabled={
+                currentSlide ===
+                instanceRef.current.track.details.slides.length - 1
+              }
+            />
+          </>
+        )}
+      </div>
+      {loaded && instanceRef.current && (
+        <div className="dots">
+          {[
+            ...Array(instanceRef.current.track.details.slides.length).keys(),
+          ].map((idx) => {
+            return (
+              <button
+                key={idx}
+                onClick={() => {
+                  instanceRef.current?.moveToIdx(idx)
+                }}
+                className={"dot" + (currentSlide === idx ? " active" : "")}
+              ></button>
+            )
+          })}
+        </div>
+      )}
+    </>
+  )
+}
+
+function Arrow(props) {
+  const disabled = props.disabled ? " arrow--disabled" : ""
+  return (
+    <svg
+      onClick={props.onClick}
+      className={`arrow ${
+        props.left ? "arrow--left" : "arrow--right"
+      } ${disabled}`}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      {props.left && (
+        <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+      )}
+      {!props.left && (
+        <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+      )}
+    </svg>
     );
-};
+}
 
 export default Slider;

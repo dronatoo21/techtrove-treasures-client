@@ -20,7 +20,7 @@ const Brand = () => {
     },[])
 
     return (
-        <div className="p-5 lg:p-0">
+        <div className="p-5 lg:p-0 container mx-auto">
             <Slider/>
             <h1 className="font-bold text-3xl text-center mt-14">Products</h1>
             <div className="grid my-14 lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-5">

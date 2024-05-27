@@ -42,17 +42,17 @@ const UpdateProduct = () => {
     })
     }
     return (
-        <div>
+        <div className="min-h-md:[65vh]">
             <>
-        <h1 className="font-bold text-3xl text-center mt-16">Please Update the Product</h1>
+        <h1 className="font-bold text-lg md:text-2xl lg:text-3xl text-center mt-16">Please Update the Product</h1>
         <form onSubmit={handleUpdateProduct} className="card-body">
           <div className="form-control">
-            <input type="text" name="imgUrl" placeholder="Image url" className="input w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="name" placeholder="Name" className="my-2 input w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="brandName" placeholder="Brand Name" className="input  w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="type" placeholder="Type" className="input my-2 w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="price" placeholder="Price" className="input mb-2 w-3/5 mx-auto input-bordered" required />
-            <select value={ratingSelect} onChange={e => setRatingSelect(e.target.value)} className="input mb-2 w-3/5 mx-auto input-bordered" name="ratings" id="">
+            <input type="text" name="imgUrl" placeholder="Image url" className="input w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="name" placeholder="Name" className="my-2 input w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="brandName" placeholder="Brand Name" className="input  w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="type" placeholder="Type" className="input my-2 w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="price" placeholder="Price" className="input mb-2 w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <select value={ratingSelect} onChange={e => setRatingSelect(e.target.value)} className="input mb-2 w-10/12 md:w-3/5 mx-auto input-bordered" name="ratings" id="">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>
