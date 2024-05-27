@@ -33,9 +33,9 @@ const Nav = () => {
     const {user, userLogout} = useContext(AuthContext);
 
     const links = <>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/">Home</NavLink></li>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/addProduct">Add Product</NavLink></li>
-    <li className="btn btn-neutral ml-2 border-2 rounded-xl font-semibold"><NavLink to="/mycart">My Cart</NavLink></li>
+    <li className="btn btn-sm bg-transparent text-white ml-2 border-2 rounded-xl font-semibold"><NavLink to="/">Home</NavLink></li>
+    <li className="btn btn-sm bg-transparent text-white ml-2 border-2 rounded-xl font-semibold"><NavLink to="/addProduct">Add Product</NavLink></li>
+    <li className="btn btn-sm bg-transparent text-white ml-2 border-2 rounded-xl font-semibold"><NavLink to="/mycart">My Cart</NavLink></li>
     </>
 
     const handleLogout = () => {
@@ -48,7 +48,7 @@ const Nav = () => {
     };
 
     return (
-        <div className="navbar flex lg:flex-row flex-col md:h-64 lg:h-32 h-60 md:py-9 lg:py-6">
+        <div className="navbar flex lg:flex-row bg-transparent fixed z-20 flex-col md:h-64 lg:h-32 h-60 md:py-9 lg:py-6">
           <div className="navbar-start">
           <img className='md:w-20 w-10' src="https://i.ibb.co/M7sMZmk/logo.png" alt="logo" />
           <h1 className="md:text-4xl ml-1 text-2xl font-extrabold">TechTrove</h1>

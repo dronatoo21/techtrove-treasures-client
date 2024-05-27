@@ -1,8 +1,8 @@
 import { useLoaderData } from "react-router-dom";
 import Brands from "./Brands";
-import Banner from "./Banner";
 import Discount from "./Discount";
 import OurTeam from "./OurTeam";
+import Banner from "./Banner/Banner";
 
 const Home = () => {
 
