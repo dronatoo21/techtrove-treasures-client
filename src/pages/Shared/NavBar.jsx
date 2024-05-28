@@ -42,20 +42,20 @@ const NavBar = () => {
       };
 
     const links = <>
-    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black lg:text-white ml-2 rounded-xl font-semibold" to="/">Home</NavLink></li>
-    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black lg:text-white ml-2 rounded-xl font-semibold" to="/addProduct">Add Product</NavLink></li>
-    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black lg:text-white ml-2 rounded-xl font-semibold" to="/mycart">My Cart</NavLink></li>
+    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black dark:text-black lg:text-white ml-2 rounded-xl font-semibold" to="/">Home</NavLink></li>
+    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black dark:text-black lg:text-white ml-2 rounded-xl font-semibold" to="/addProduct">Add Product</NavLink></li>
+    <li><NavLink style={({ isActive })=> ({borderBottom: isActive ? "2px solid white" : " ", borderTop: isActive ? "2px solid white" : " ", background: "transparent",})} className="btn btn-sm border-none text-black dark:text-black lg:text-white ml-2 rounded-xl font-semibold" to="/mycart">My Cart</NavLink></li>
     {
         user ? <li className="lg:hidden"><Link onClick={handleLogout} className="btn btn-sm border-none text-black bg-white lg:text-white ml-2 rounded-xl font-semibold" >Logout</Link></li> : <li className="lg:hidden"><Link to="/login" className="btn btn-sm border-none text-black bg-white lg:text-white ml-2 rounded-xl font-semibold" >Login</Link></li>
     }
     </>
 
     return (
-        <div className="navbar bg-gradient-to-r from-[#3d6ae9] to-[#2684fe] text-white px-5 md:px-10">
+        <div className="navbar bg-gradient-to-r from-[#3d6ae9] to-[#2684fe] text-white dark:text-black px-5 md:px-10">
           <div className="navbar-start">
             <div className="dropdown lg:hidden flex">
-              <div tabIndex={0} role="button" className="btn bg-transparent text-white">
-                <FaList/>
+              <div tabIndex={0} role="button" className="btn border-none bg-transparent dark:text-black text-white">
+                <FaList className="text-xl"/>
               </div>
               <ul tabIndex={0} className="p-2 shadow menu dropdown-content z-[1] bg-base-100 rounded-box w-52 mt-10">
                 {links}
@@ -85,12 +85,12 @@ const NavBar = () => {
             </div>
             { user ?
             <>
-          <label tabIndex={0} className="btn btn-sm lg:mr-7 text-white btn-circle avatar mb-4">
+          <label tabIndex={0} className="btn btn-sm lg:mr-7 text-white dark:text-black btn-circle avatar mb-4">
             <img className="rounded-full" src={user?.photoURL} alt="photo" />
             <p className=" text-sm text-center">{user?.displayName?.split(' ').pop()}</p>
           </label>
-            <button onClick={handleLogout} className="hidden lg:flex btn bg-transparent btn-outline text-white rounded-xl">Logout</button></>
-              : <Link to="/login"><button className="hidden lg:flex btn bg-transparent btn-outline text-white rounded-xl">Login</button></Link>
+            <button onClick={handleLogout} className="hidden lg:flex btn bg-transparent btn-outline dark:text-black text-white rounded-xl">Logout</button></>
+              : <Link to="/login"><button className="hidden lg:flex btn bg-transparent btn-outline dark:text-black text-white rounded-xl">Login</button></Link>
             }
           </div>
         </div>

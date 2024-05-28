@@ -43,13 +43,13 @@ const AddProducts = () => {
         <h1 className="font-bold text-lg md:text-2xl lg:text-3xl text-center mt-16">Please Add Product</h1>
         <form onSubmit={handleAddProduct} className="card-body">
           <div className="form-control">
-            <input type="text" name="imgUrl" placeholder="Image url" className="input w-10/12 md:w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="name" placeholder="Name" className="my-2 input w-10/12 md:w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="brandName" placeholder="Brand Name" className="input  w-10/12 md:w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="type" placeholder="Type" className="input my-2 w-10/12 md:w-3/5 mx-auto input-bordered" required />
-            <input type="text" name="price" placeholder="Price" className="input  w-10/12 md:w-3/5 mx-auto input-bordered" required />
-            <textarea placeholder="Short Description" name="shortDes" className="textarea textarea-bordered textarea-sm w-10/12 md:w-3/5 mx-auto my-2" required />
-            <select value={ratingSelect} onChange={e => setRatingSelect(e.target.value)} className="input mb-2 w-10/12 md:w-3/5 mx-auto input-bordered" name="ratings" id="">
+            <input type="text" name="imgUrl" placeholder="Image url" className="input dark:bg-zinc-900 dark:text-white dark:border-white w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="name" placeholder="Name" className="my-2 input dark:bg-zinc-900 dark:text-white dark:border-white w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="brandName" placeholder="Brand Name" className="input dark:bg-zinc-900 dark:text-white dark:border-white  w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="type" placeholder="Type" className="input my-2 dark:bg-zinc-900 dark:text-white dark:border-white w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <input type="text" name="price" placeholder="Price" className="input dark:bg-zinc-900 dark:text-white dark:border-white  w-10/12 md:w-3/5 mx-auto input-bordered" required />
+            <textarea placeholder="Short Description" name="shortDes" className="textarea dark:bg-zinc-900 dark:text-white dark:border-white textarea-bordered textarea-sm w-10/12 md:w-3/5 mx-auto my-2" required />
+            <select value={ratingSelect} onChange={e => setRatingSelect(e.target.value)} className="input dark:bg-zinc-900 dark:text-white dark:border-white mb-2 w-10/12 md:w-3/5 mx-auto input-bordered" name="ratings" id="">
                 <option>1</option>
                 <option>2</option>
                 <option>3</option>

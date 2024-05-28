@@ -34,8 +34,8 @@ const CartProduct = ({product, products, setProducts}) => {
     return (
         <div>
             <div>
-            <div className="card bg-base-100 shadow-xl h-[650px] dark:text-gray-900">
-              <figure><img className="w-52 h-48" src={imageUrl} alt="products" /></figure>
+            <div className="card dark:bg-zinc-800 dark:text-white bg-base-100 shadow-xl h-[650px]">
+              <figure><img className="w-52 rounded-lg h-48" src={imageUrl} alt="products" /></figure>
               <div className="card-body">
                 <p className="badge border-2 border-gray-300 px-4 mx-auto font-bold">{brandName} - {type}</p>
                 <h2 className="card-title">{name}</h2>
