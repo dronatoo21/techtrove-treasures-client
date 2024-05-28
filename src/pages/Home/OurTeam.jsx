@@ -1,6 +1,6 @@
 const OurTeam = () => {
     return (
-        <div>
+        <div className="container mx-auto">
             <div className="text-center mb-28 py-5 grid grid-cols-1 md:grid-cols-2 lg:gap-0 md:gap-5 gap-10 lg:grid-cols-4">
             <div >
                 <img className="h-[250px] w-[250px] rounded-full border-2 mx-auto" src="https://i.ibb.co/4FjHVGf/m1.jpg" alt="img" />
