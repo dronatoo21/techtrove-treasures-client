@@ -3,6 +3,7 @@ import Brands from "./Brands";
 import Discount from "./Discount";
 import OurTeam from "./OurTeam";
 import Banner from "./Banner/Banner";
+import Review from "./Review/Review";
 
 const Home = () => {
 
@@ -20,6 +21,7 @@ const Home = () => {
             <Discount/>
             <h1 className="font-bold text-xl mt-7 mb-5 md:text-2xl lg:text-3xl text-center">Our Members</h1>
             <OurTeam/>
+            <Review/>
         </div>
     );
 };

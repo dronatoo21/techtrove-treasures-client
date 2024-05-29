@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "username": "Aminul",
+        "textReview": "Great selection of products and competitive prices. Shipping was fast and the customer service is excellent.",
+        "starReview": 5
+    },
+    {
+        "id": 2,
+        "username": "Rahim",
+        "textReview": "Found exactly what I needed, but the website interface could use some improvement. Overall, a good experience.",
+        "starReview": 4
+    },
+    {
+        "id": 3,
+        "username": "Fatima",
+        "textReview": "Wide range of electronics, but some items were out of stock. Prices are decent.",
+        "starReview": 3
+    },
+    {
+        "id": 4,
+        "username": "Hasan",
+        "textReview": "The product I received was defective. Had to go through a lengthy return process.",
+        "starReview": 2
+    },
+    {
+        "id": 5,
+        "username": "Kamal",
+        "textReview": "Terrible experience. Customer service was unhelpful and the product arrived late.",
+        "starReview": 1
+    },
+    {
+        "id": 6,
+        "username": "Nabila",
+        "textReview": "Excellent quality of products. The website is easy to navigate and checkout was smooth.",
+        "starReview": 5
+    },
+    {
+        "id": 7,
+        "username": "Parveen",
+        "textReview": "Good prices but shipping took longer than expected. Customer service was helpful.",
+        "starReview": 3
+    },
+    {
+        "id": 8,
+        "username": "Imran",
+        "textReview": "Satisfied with the purchase. The product matches the description and works perfectly.",
+        "starReview": 4
+    },
+    {
+        "id": 9,
+        "username": "Laila",
+        "textReview": "The website had some bugs while placing the order, but the customer support resolved it quickly.",
+        "starReview": 3
+    },
+    {
+        "id": 10,
+        "username": "Tariq",
+        "textReview": "Received a wrong item initially, but the exchange process was straightforward and quick.",
+        "starReview": 4
+    }
+]

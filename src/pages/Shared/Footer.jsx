@@ -7,7 +7,7 @@ const Footer = () => {
   const [color, setColor] = useState("bg-gradient-to-r from-[#4a5970] to bg-[#4e6476] dark:bg-gradient-to-r dark:from-[#191f2e] to dark:bg-[#121821] text-black pb-6 rounded-t-lg");
 
     return (
-      <footer className="mt-10">
+      <footer className="mt-10 md:mt-20">
       <div className={`${color}`}>
         <div className="container mx-auto">
           <div className="flex justify-between py-4 px-12">
