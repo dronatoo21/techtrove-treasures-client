@@ -34,16 +34,16 @@ const CartProduct = ({product, products, setProducts}) => {
     return (
         <div>
             <div>
-            <div className="card dark:bg-zinc-800 dark:text-white bg-base-100 shadow-xl h-[650px]">
+            <div className="card dark:bg-zinc-800 dark:text-white bg-base-100 shadow-xl lg:h-[650px]">
               <figure><img className="w-52 rounded-lg h-48" src={imageUrl} alt="products" /></figure>
               <div className="card-body">
                 <p className="badge border-2 border-gray-300 px-4 mx-auto font-bold">{brandName} - {type}</p>
                 <h2 className="card-title">{name}</h2>
                 {
-                        shortDes.length > 150 ? <p className="font-normal">{shortDes.slice(0, 150)} <Link to={`/details/${_id}`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
+                        shortDes.length > 150 ? <p className="font-normal md:text-base text-sm">{shortDes.slice(0, 150)} <Link to={`/details/${_id}`} className="text-blue-800 font-semibold">Read more...</Link></p> : <p>{shortDes}</p>
                 }
                 <p className="font-semibold">Price: {price} BDT</p>
-                <p className="text-lg font-medium">Ratings : {ratings}/5</p>
+                <p className="text-base lg:text-lg font-medium">Ratings : {ratings}/5</p>
                 <div className=" my-3 justify-center">
                   <button onClick={() => handleDelete(_id)} className="btn w-full btn-neutral">Delete</button>
                 </div>
