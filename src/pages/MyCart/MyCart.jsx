@@ -9,7 +9,7 @@ const MyCart = () => {
         fetch(`https://techtrove-treasures-server-swart.vercel.app/usersCart?usersCart=${user?.email}`)
         .then(res => res.json())
         .then(data => setProducts(data))
-    },[])
+    },[user?.email])
 
     return (
         <>

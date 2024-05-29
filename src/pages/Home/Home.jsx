@@ -18,7 +18,7 @@ const Home = () => {
                 }
             </div>
             <Discount/>
-            <h1 className="font-bold text-3xl text-center mt-16">Our Members</h1>
+            <h1 className="font-bold text-xl mt-7 mb-5 md:text-2xl lg:text-3xl text-center">Our Members</h1>
             <OurTeam/>
         </div>
     );
