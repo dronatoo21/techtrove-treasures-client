@@ -1,19 +1,19 @@
 [
     {
         "id": 1,
-        "username": "Aminul",
+        "username": "Fahim",
         "textReview": "Great selection of products and competitive prices. Shipping was fast and the customer service is excellent.",
         "starReview": 5
     },
     {
         "id": 2,
-        "username": "Rahim",
+        "username": "Nawha",
         "textReview": "Found exactly what I needed, but the website interface could use some improvement. Overall, a good experience.",
         "starReview": 4
     },
     {
         "id": 3,
-        "username": "Fatima",
+        "username": "Sierra",
         "textReview": "Wide range of electronics, but some items were out of stock. Prices are decent.",
         "starReview": 3
     },
