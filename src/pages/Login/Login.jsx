@@ -54,7 +54,7 @@ const Login = () => {
             <div className="hero my-12 md:mb-24">
               <div className="hero-content flex-col">
                 <div className="text-center">
-                  <h1 className="font-bold text-lg md:text-2xl lg:text-3xl text-center mt-16">Login Now!</h1>
+                  <h1 className="font-bold text-lg md:text-2xl lg:text-3xl text-center">Login Now!</h1>
                 </div>
                 <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 dark:bg-transparent dark:border-2 dark:text-white">
                   <form onSubmit={handleLogin} className="card-body">
@@ -82,7 +82,7 @@ const Login = () => {
                     </div>
                   </form>
                   <h1 className='text-center -mt-5'>OR</h1>
-                  <button onClick={handleGoogleSignIn} className="btn bg-gray-600 mx-8 mt-2 text-white">Login with Google</button>
+                  <button onClick={handleGoogleSignIn} className="btn bg-gray-600 mx-8 my-2 text-white">Login with Google</button>
                   {
                     logError && <p className="text-red-700 px-8 pb-5">{logError}</p>
                   }

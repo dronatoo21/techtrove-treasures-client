@@ -60,37 +60,34 @@ const Register = () => {
             <div className="hero my-12 md:mb-24">
               <div className="hero-content flex-col">
                 <div className="text-center">
-                  <h1 className="text-4xl text-black font-bold">Register now!</h1>
+                <h1 className="font-bold text-lg md:text-2xl lg:text-3xl text-center ">Register Now!</h1>
                 </div>
-                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100 dark:bg-transparent dark:border-2 dark:text-white">
                   <form onSubmit={handleRegister} className="card-body">
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Name</span>
+                        <span className="label-text dark:text-white">Name</span>
                       </label>
-                      <input type="text" placeholder="Your name" name="name" className="input input-bordered" required />
+                      <input type="text" placeholder="Your name" name="name" className="dark:bg-transparent dark:border-white input input-bordered" required />
+                    </div>
+                    <div className="form-control">
+                      <label className="label"> 
+                        <span className="label-text dark:text-white">Email</span>
+                      </label>
+                      <input type="email" placeholder="email" name="eamil" className="dark:bg-transparent dark:border-white input input-bordered" required />
                     </div>
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">Email</span>
-                      </label>
-                      <input type="email" placeholder="email" name="eamil" className="input input-bordered" required />
-                    </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">Password</span>
+                        <span className="label-text dark:text-white">Password</span>
                       </label>
                       <div className="relative">
-                        <input type={showPass ? "text" : "password"} placeholder="password" name="password" className="input input-bordered w-full" required />
+                        <input type={showPass ? "text" : "password"} placeholder="password" name="password" className="dark:bg-transparent dark:border-white input input-bordered w-full" required />
                         <span className="absolute top-4 right-2" onClick={()=> setShowPass(!showPass)}>
                           {
                           showPass ? <FaEyeSlash/> : <FaEye/>
                           }
                           </span>
                       </div>
-                      <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">Forgot password?</a>
-                      </label>
                     </div><br />
                     <div>
                         <input type="checkbox" name="checkbox" id="terms" />
