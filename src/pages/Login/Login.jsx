@@ -4,8 +4,6 @@ import { AuthContext } from "../../providers/AuthProvider";
 import { useContext, useState } from "react";
 import { GoogleAuthProvider } from "firebase/auth";
 import { toast } from "react-toastify";
-
-
 const Login = () => {
     const {loginUser, googleLogin} = useContext(AuthContext)
     const [logError, setLogError] = useState('');
